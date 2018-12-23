@@ -73,7 +73,7 @@ def generate(context_length, training_file, output_length=8):
 
     # Open the training file
     with open(training_file, 'r') as f:
-        training_data = f.read()
+        training_data = f.read().decode('utf-8')
 
     counts = get_counts(context_length, training_data)
 
