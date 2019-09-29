@@ -13,7 +13,7 @@ The Following is a short description of each of the included files
 | File		|Description	|
 |---------|-------------|
 |generate.py	|Script to generate new titles|
-|hoyatitltes.txt|[Scraped titles](https://sites.google.com/view/ryanamannion/projects/nlp-twitter-bot-project?authuser=0#h.p_9XsNJNP3M3Gv "Write-up: Gathering the Data") from the online archives of The Hoya 1998-2018|
+|hoyatitles.txt|[Scraped titles](https://sites.google.com/view/ryanamannion/projects/nlp-twitter-bot-project?authuser=0#h.p_9XsNJNP3M3Gv "Write-up: Gathering the Data") from the online archives of The Hoya 1998-2018|
 |counts.pkl	|The counts of the trigram continuations for use in generate.py, pickled format for efficiency|
 |bot.py		|Script to tweet out the titles generate from generate.py|
 
