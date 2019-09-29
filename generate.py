@@ -17,6 +17,7 @@ from random import choice, random
 from nltk import word_tokenize
 import re
 import pickle
+import os, sys
 
 # USE IF YOU DO NOT HAVE A PICKLED DICTIONARY
 # def get_counts(context_length, training_text):
@@ -76,7 +77,7 @@ def detokenize(input):
 
 def generate(output_length=8):
 
-    counts = load_obj('./TheHoyaBot/counts.pkl')
+    counts = load_obj(os.path.join(sys.path[0], 'counts.pkl'))
 
     """
     this part is a little messy but it works. Comments for clarification
