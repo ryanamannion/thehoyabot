@@ -76,7 +76,7 @@ def detokenize(input):
 
 def generate(output_length=8):
 
-    counts = load_obj('/home/pi/thehoyabot/counts.pkl')
+    counts = load_obj('./TheHoyaBot/counts.pkl')
 
     """
     this part is a little messy but it works. Comments for clarification
