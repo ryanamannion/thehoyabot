@@ -45,7 +45,7 @@ page_counts = {}
 # page_counts[2018] = 131
 page_counts[2019] = 83
 
-file = open(os.path.join(sys.path[0], "hoyatitles.txt"), "w")
+file = open(os.path.join(sys.path[0], "hoyatitles.txt"), "a")
 
 count = 0
 
