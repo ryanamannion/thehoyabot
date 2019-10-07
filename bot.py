@@ -2,7 +2,15 @@
 # -*- coding: utf-8 -*-
 
 """
-Adapted from code by Molly White
+bot.py
+
+This script is adapted from code by Molly White. bot.py tweets out the generated titles from generate.py
+
+Ryan A. Mannion
+ram321@georgetown.edu
+twitter @ryanamannion
+ryanamannion.com
+
 """
 
 import os
