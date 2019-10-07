@@ -1,16 +1,17 @@
 """
 sitescraper.py
 
-Ryan A. Mannion
-twitter: @ryanamannion
-github: ryanamannion
-
 This script uses BeautifulSoup to scrape titles from the online archives of thehoya.com,
 Georgetown University's student newspaper. 
 
 The URLs for the archives are built in the following manner: http://www.thehoya.com/[year]/[page number] 
 
 The script cycles through the pages and with the help of HTML picks out and writes the titles to a file.
+
+Ryan A. Mannion
+ram321@georgetown.edu
+twitter @ryanamannion
+ryanamannion.com
 
 """
 
