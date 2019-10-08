@@ -12,10 +12,9 @@ The Following is a short description of each of the included files
 
 | File		|Description	|
 |---------|-------------|
-|generate.py	          |Script to generate new titles|
-|hoyatitles.txt         |[Scraped titles](https://sites.google.com/view/ryanamannion/projects/nlp-twitter-bot-project?authuser=0#h.p_9XsNJNP3M3Gv "Write-up: Gathering the Data") from the online archives of The Hoya 1998-2018|
-|counts.pkl	            |The counts of the trigram continuations for use in generate.py, pickled format for efficiency|
-|bot.py		              |Script to tweet out the titles generated from generate.py|
 |sitescraper.py         |Script to scrape thehoya.com titles from html using BeautifulSoup|
-
-
+|hoyatitles.txt         |[Scraped titles](https://sites.google.com/view/ryanamannion/projects/nlp-twitter-bot-project?authuser=0#h.p_9XsNJNP3M3Gv "Write-up: Gathering the Data") from the online archives of The Hoya 1998-2018|
+|getcounts.py           |Script to count trigram continuations from hoyatitles.txt|
+|counts.pkl	            |The counts of the trigram continuations for use in generate.py, pickled format for efficiency|
+|generate.py	          |Script to generate new titles from pickled file|
+|bot.py		              |Script to tweet out the titles generated from generate.py|
