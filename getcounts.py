@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
-counts.py
+getcounts.py
 
 This script takes hoyatitles.txt and counts the trigram continuations for use in generate.py. The output of this file
-is a pickled dictionary called counts.pkl, which allows generate.py to simply load the counts instead of counting every time.
+is a pickled dictionary called counts.pkl, which allows generate.py to simply load the counts instead of counting every
+time.
 
 Ryan A. Mannion
 ram321@georgetown.edu
