@@ -104,5 +104,6 @@ def generate(output_length=8):
 
     return sentence
 
+
 if __name__ == '__main__':
     generate()
