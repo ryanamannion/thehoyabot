@@ -24,14 +24,14 @@ from bs4 import BeautifulSoup
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-b', '--begin', action="store", dest="begin", default="1998", help="year to begin scraping at")
-parser.add_argument('-e', '--end', action="store", dest="end", default="2019", help="year to end scraping at")
-parser.add_argument('-s', '--start', action="store", dest="start", default="1", help="page number to start scraping at")
+parser.add_argument('--begin', action="store", dest="begin", default="1998", help="year to begin scraping at")
+parser.add_argument('--end', action="store", dest="end", default="2019", help="year to end scraping at")
+parser.add_argument('--start', action="store", dest="start", default="1", help="page number to start scraping at")
 
 options = parser.parse_args()
-begin = options.begin
-end = options.end
-start = options.start
+begin = int(options.begin)
+end = int(options.end)
+start = int(options.start)
 
 page_counts = {}
 
@@ -56,23 +56,27 @@ page_counts[2015] = 218
 page_counts[2016] = 189
 page_counts[2017] = 160
 page_counts[2018] = 131
-page_counts[2019] = 83
+page_counts[2019] = 92
 
-file = open(os.path.join(sys.path[0], "hoyatitles.txt"), "a")
+file = open(os.path.join(sys.path[0], "hoyatitlestest.txt"), "a+")
 
-count = 0
+count = 0       # establish count for titles per page
+counter = 0     # establish counter for page numbers
 
-# Need to add some kind of functionality to start the for loop at the specified year in begin and end at end
+real_end = end + 1
 
-for year, pages in page_counts.items():
-    page_list = range(pages)
-    counter = 0
-    for page in page_list:
+years = list(range(begin, real_end))    # create list of specified years
+
+for year in years:      # loop through specified years
+    end_page = page_counts.get(year) + 1
+    pages = list(range(start, end_page))    # create range of pages
+
+    for page in pages:      # loop through specified pages
 
         url = 'http://www.thehoya.com/' + str(year) + '/page/' + str(page) + '/'
 
         source = requests.get(url).text  # read the html source text of page one, feed to BeautifulSoup
-        start_soup = BeautifulSoup(source, 'html')
+        start_soup = BeautifulSoup(source, features="html.parser")
 
         for article in start_soup.find_all('div', class_='post-content'):       # skim the first page
 
