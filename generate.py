@@ -13,10 +13,9 @@ Adapted from code by Amir Zeldes
 
 """
 
-from random import choice, random
-from nltk import word_tokenize
+from random import choice
 import re
-import pickle, json
+import pickle
 import os, sys
 
 
